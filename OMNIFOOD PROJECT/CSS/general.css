@@ -1,0 +1,275 @@
+/* 
+----- 01 TYPOGRAGPH SYSTEM
+    SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+    Font Weights
+    Default: 400
+    Medium:  500
+    Semi-bold: 600
+    Bold:  700
+
+    Line heights:
+    Default: 1
+    Medium: 1
+    2
+    Small:  1.05
+    Paragraph default: 1.06
+
+
+    _Letter spacing
+    -0.5px
+    0.75px
+    
+    
+
+    FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+----- 02 COLORS
+- Primary: #e67e22
+
+- Tints: #fdf2e9;
+- Shadows:
+- Accents:
+- Greys
+- #555
+
+----- 05 SHADOWS
+----- 06 BORDER RADIUS
+Defualts: 7px
+Nav CTA:  5px
+
+----- 07 WHITESPACE
+ */
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1 rem = 16px  */
+    /* 10px = 0.625 = 62.5% */
+    /* 10px / 16px = 0.625 = 62.5% */
+    /* Percentage of user's browser font-size setting */
+    /* font-size: 10px; */
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    /* DOES NOT WORK ON SAFARI AND MICROSOFT EDGE */
+    /* scroll-behavior: smooth; */
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+
+    /* Only works if there is nothing absolutely positioned in relation to body */
+    overflow-x: hidden;
+}
+/* ********************************* */
+/* GENERAL COMPONENTS */
+/* ********************************* */
+
+.heading-primary, 
+.heading-secondary,
+.heading-tertiary
+ {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: -0.5px;
+}
+
+.heading-primary {
+    font-size: 4.8rem;
+    line-height: 1.05;
+    margin-bottom: 2.4rem;
+    /* -webkit-text-stroke: 2px red; */
+}
+
+.heading-secondary {
+    font-size: 3.6rem;
+    line-height: 1.2;
+    margin-bottom: 8.4rem;
+}
+
+.heading-tertiary {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 2.4rem;
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.55px;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+     display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.4rem 2.8rem;
+    border-radius: 7px;
+    border: none;
+    font-family: inherit;
+
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn--full:link, 
+.btn--full:visited {
+    background-color: #e67e22;
+}
+
+.btn--full:hover,
+.btn--full:active {
+    background-color: #cf711f;
+}
+
+.btn--outline:link, 
+.btn--outline:visited {
+    background-color: #fff;
+    color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+    background-color: #fdf2e9;
+    box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+    background-color: #45260a;
+    color: #fdf2e9;
+    align-self: end;
+    padding: 1.2rem;
+}
+
+.btn--form:hover,
+.btn--form:active {
+    background-color: #fff;
+    color: #555;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.6rem rgba(235, 125, 34, 0.5);
+}
+
+.cta *:focus {
+    outline: none;
+    outline: solid 3px  #cf711f;
+    outline-offset: 1px;
+
+    box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+.link:link,
+.link:visited {
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+    color: #cf711f;
+    border: 1px solid transparent;
+}
+
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.list-item {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    line-height: 1.2;
+}
+
+.list-icon {
+    height: 2.6rem;
+    height: 2.6rem;
+    color: #e67e22;
+}
+
+
+/* HELPER/SETTINGS CLASSES */
+.margin-right-sm {
+    margin-right: 1.2rem !important;
+}
+
+.margin-bottom-md {
+    margin-bottom: 4.2rem !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.container {
+    max-width: 115rem;
+    margin: 0 auto;
+    padding: 0 3.2rem;
+}
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+    /* margin-bottom: 8.4rem; */
+}
+
+.grid:last-child {
+    margin-bottom: 0;
+}
+
+.grid:not(:last-child) {
+    margin-bottom: 8.4rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-v{
+    align-items: center;
+}
+
+strong {
+    font-weight: 500;
+}
